@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Impersonation Scam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <!-- Style for Page. DONT REMOVE ANY CODE JUST ADD IF NEEDED!!! -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg {
+      min-height:1000px;
+      background-image:url('images/background2.jpg');
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }    
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2b2b2b;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header img {
+      width: 100px;
+      height: 90px;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 12px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header a:hover {
+      background-color: #3d3d3d;
+    }
+
+    .header a.active {
+      background-color: #404040;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2b2b2b;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      z-index: 1000;
+      border-radius: 5px;
+      padding: 10px 0;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown-content a {
+      color: #e0e0e0;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #3d3d3d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #6d6d6d;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    main img {
+    display: block;
+    margin: 20px auto; 
+    }
+
+    h1 {
+      font-size: 35px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #dcdcdc;
+    }
+
+    main p, main li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .footer {
+      background-color: #2b2b2b;
+      color: #e0e0e0;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .footer p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .footer nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #dddddd;
+    }
+
+    .footer img {
+      vertical-align: middle;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer img:hover {
+      opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .header-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .header a {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: static;
+        display: none;
+        background-color: #2b2b2b;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 10px;
+      }
+
+      main {
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      main p, main li {
+        font-size: 16px;
+      }
+
+      .footer nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        </style>
+        </head>
+        <!-- Header Code DONT CHANGE OR TOUCH!!! -->
+    <body class="bg">
+
+    <div class="header">
+        <img src="Images/ScamAlertLogo.jpg" alt="ScamAlert Logo" />
+        <div class="header-right">
+        <a href="page1.html">Home</a>
+        <div class="dropdown">
+            <a href="#">Common Scams</a>
+            <div class="dropdown-content">
+            <a href="page2.html">Impersonation Scam</a>
+            <a href="page3.html">Investment Scam</a>
+            <a href="page4.html">E-Commerce Scams</a>
+            </div>
+        </div>
+        <a href="page5.html">How to Avoid</a>
+        <a href="page6.html">Form</a>
+        </div>
+    </div>
+        <div>
+        </div>
+<!-- Your Content Code parts -->
+        <main>
+          <h1><u>What is impersonation scam</u></h1>
+          <img src="Images/Fakepolice.jpeg" width="500" class="center" alt="Scammer pretending to be a police officer"/>
+          <p>It refers to the criminal act where fraudsters assume the identities of others or institutions, 
+              using channels such as phone calls, text messages, and the internet, 
+              to fabricate false information to deceive others' trust and then carry out financial fraud. 
+              Common methods include impersonating the police and courts, customer service representatives, relatives and friends, 
+              government departments, etc. They use reasons such as investigation of the case, refund and compensation, 
+              urgent assistance, policy subsidies, etc. to induce victims to transfer money, provide bank card information, 
+              or download fraud software, thereby exploiting people's fear, greed, or gullibility to achieve the goal of fraud. </p >
+              <br>
+              <hr>
+              <br>
+          <h1><u>Solution for avoiding the scam</u></h1>
+          <img src="Images/solution1.png" alt="What you can do to prevent identity thef and fraud" width="350" height="350"/>
+          <p>Be vigilant against identity fraud</p >
+          <ol>
+              <li>The police, courts, tax authorities and other institutions will never ask for bank transfers, verification or bank card information over the phone or text message. If you receive such a call, immediately hang up and call the official hotline to verify</li>
+              <li>The official customer service of e-commerce and banks will not call or send text messages to inform customers about "refunds due to product quality issues" or "need to cancel membership due to incorrect operation and it requires confirmation through the app or the official website</li>
+              <li>When receiving requests for help from "relatives or friends" via social media, text messages or unknown numbers (such as "sudden illness / car accident requiring remittance"), always verify the information by calling, videoing or directly contacting the person concerned. Avoid making transfers based solely on verbal communication</li>
+          </ol>
+          <br>
+          <hr>
+          <br>
+          <h1><u>Measures of remediation</u></h1>
+          <img src="Images/Screenshot 2025-06-11 092133.png" alt="call a police and collect all evidence to the fraud" width="400" height="400"/>
+          <ul>
+              <li>Immediately call the police and provide as much detail as possible regarding the fraud, such as the accent of the perpetrator, the phone number used, the account number, etc.</li>
+              <li>Preserve evidence: Collect and retain all evidence related to the fraud, such as chat records, call records, transfer records, transaction vouchers, links or QR codes sent by the perpetrator, etc.</li>
+          </ul>
+          <br>
+        </main>
+<!-- Footer Code. DONT CHANGE OR TOUCH!!! -->
+            <footer class="footer">
+        <p>Scam Alert</p>
+        <nav>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <span>Reach us:</span>
+        <a href="https://www.facebook.com/"><img src="Images/Facebook.png" width="23" height="23" alt="Facebook"/></a>
+        <a href="https://www.instagram.com/"><img src="Images/Instagram.png" width="23" height="23" alt="Instagram"/></a>
+        <a href="https://www.linkedin.com/home"><img src="Images/linkdn.png" width="23" height="23" alt="LinkedIn"/></a>
+        <a href="https://www.youtube.com/"><img src="Images/Youtube.png" width="32" height="23" alt="YouTube"/></a>
+        </nav>
+    </footer>
+    </body>
+</html>

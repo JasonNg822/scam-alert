@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introduction Scams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg {
+      min-height:1000px;
+      background-image:url('images/background2.jpg');
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2b2b2b;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header img {
+      width: 100px;
+      height: 90px;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 12px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header a:hover {
+      background-color: #3d3d3d;
+    }
+
+    .header a.active {
+      background-color: #404040;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2b2b2b;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      z-index: 1000;
+      border-radius: 5px;
+      padding: 10px 0;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown-content a {
+      color: #e0e0e0;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #3d3d3d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #6d6d6d;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 35px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #dcdcdc;
+    }
+
+    main p, main li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: rgb(255, 255, 255);
+    }
+
+    .footer {
+      background-color: #2b2b2b;
+      color: #e0e0e0;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .footer p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .footer nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #dddddd;
+    }
+
+    .footer img {
+      vertical-align: middle;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer img:hover {
+      opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .header-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .header a {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: static;
+        display: none;
+        background-color: #2b2b2b;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 10px;
+      }
+
+      main {
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      main p, main li {
+        font-size: 16px;
+      }
+
+      .footer nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Slideshow Styles */
+    .slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 20px auto;
+    height: 400px; /* Set fixed height */
+    border-radius: 8px;
+    position: relative;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 100%;
+        transition: left 1s ease-in-out;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .slide.active {
+        left: 0;
+        opacity: 1;
+        z-index: 2;
+    }
+
+    @keyframes fadeEffect {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg">
+
+  <div class="header">
+    <img src="Images/ScamAlertLogo.jpg" alt="ScamAlert Logo" />
+    <div class="header-right">
+      <a href="page1.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Common Scams</a>
+        <div class="dropdown-content">
+          <a href="page2.html">Impersonation Scam</a>
+          <a href="page3.html">Investment Scam</a>
+          <a href="page4.html">E-Commerce Scams</a>
+        </div>
+      </div>
+      <a href="page5.html">How to Avoid</a>
+      <a href="page6.html">Form</a>
+    </div>
+  </div>
+
+<!-- Slideshow Section -->
+  <div class="slideshow-container">
+  <div class="slides-track">
+    <div class="slide">
+      <a href="page1.html">
+        <img src="Images/Scambannerimage1.jpg" alt="Slide 1">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="page1.html">
+        <img src="Images/Scambannerimage2.jpg" alt="Slide 2">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="page1.html">
+        <img src="Images/Scambannerimage3.jpg" alt="Slide 3">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="page2.html">
+        <img src="Images/Scambannerimage4.jpg" alt="Slide 4">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="page3.html">
+        <img src="Images/Scambannerimage5.jpg" alt="Slide 5">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="page4.html">
+        <img src="Images/Scambannerimage6.jpg" alt="Slide 6">
+      </a>
+    </div>
+    </div>
+  </div>
+</div>
+<br>
+<hr>
+
+  <main>
+    <h1>Cyber Scams in Singapore</h1>
+    <p>Cyber scams are surging in Singapore, with cases jumping 49.6% to 50,376 in 2023. As we become more digital, scammers are getting smarter and more aggressive.</p>
+
+    <figure>
+      <img src="Images/CyberScamStats.jpg" width="450" class="center" alt="Cyber scam statistics in Singapore">
+      <figcaption style="text-align: center; font-size: 14px; color: #aaaaaa; margin-top: 5px;">
+        Infographic showing the rise in scam cases in 2023.
+      </figcaption>
+    </figure>
+
+    <p>Common scams include online shopping fraud, romance scams, job scams, and government impersonation. Government Official Impersonation Scams alone cost Singaporeans S$151.3 million in 2024.</p>
+
+    <figure>
+      <img src="Images/Exampleofgovscam.jpg" width="350" class="center" alt="Example of a government scam">
+      <figcaption style="text-align: center; font-size: 14px; color: #aaaaaa; margin-top: 5px;">
+        Fake government message used to scam victims.
+      </figcaption>
+    </figure>
+
+    <br><hr><br>
+
+    <p>These scams target everyone – 70.9% of victims in 2024 were under 50 years old. Scammers use social media and messaging apps to make their approaches feel personal and trustworthy.</p>
+
+    <figure>
+      <img src="Images/telegram-scams-sample.jpg" width="350" class="center" alt="Screenshot of a scam message">
+      <figcaption style="text-align: center; font-size: 14px; color: #aaaaaa; margin-top: 5px;">
+        Example of a scam message on a social media platform.
+      </figcaption>
+    </figure>
+
+    <p>The problem is regional too, with Asian consumers losing nearly $700bn to digital scams in 2024.</p>
+
+    <br><hr><br>
+
+    <p><strong>Protection starts with awareness.</strong> Know the warning signs, stay informed about new tactics, and practice safe digital habits to protect yourself and your family.</p>
+
+    <figure>
+      <img src="Images/cyberhygienepractices.jpg" width="420" class="center" alt="Cyber safety illustration">
+      <figcaption style="text-align: center; font-size: 14px; color: #aaaaaa; margin-top: 5px;">
+        Stay vigilant and follow cyber hygiene practices.
+      </figcaption>
+    </figure>
+
+    <p><em>Stay alert. Stay safe.</em></p>
+    <br>
+  </main>
+
+  <!-- Footer Code. DONT CHANGE OR TOUCH!!! -->
+            <footer class="footer">
+        <p>Scam Alert</p>
+        <nav>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <span>Reach us:</span>
+        <a href="https://www.facebook.com/"><img src="Images/Facebook.png" width="23" height="23" alt="Facebook"/></a>
+        <a href="https://www.instagram.com/"><img src="Images/Instagram.png" width="23" height="23" alt="Instagram"/></a>
+        <a href="https://www.linkedin.com/home"><img src="Images/linkdn.png" width="23" height="23" alt="LinkedIn"/></a>
+        <a href="https://www.youtube.com/"><img src="Images/Youtube.png" width="32" height="23" alt="YouTube"/></a>
+        </nav>
+    </footer>
+    </body>
+</html>
+
+  <!-- Slideshow Script -->
+  <script>
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName("slide");
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+      slides[i].style.left = "100%";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    const currentSlide = slides[slideIndex - 1];
+    currentSlide.classList.add("active");
+    currentSlide.style.left = "0";
+
+    setTimeout(showSlides, 4000); // Change every 4 seconds
+  }
+
+  showSlides();
+</script>
+</body>
+</html>

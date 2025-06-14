@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Commerce Scams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <!-- Style for Page. DONT REMOVE ANY CODE JUST ADD IF NEEDED!!! -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg {
+      min-height:1000px;
+      background-image:url('images/background2.jpg');
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2b2b2b;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header img {
+      width: 100px;
+      height: 90px;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 12px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .header a:hover {
+      background-color: #3d3d3d;
+    }
+
+    .header a.active {
+      background-color: #404040;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2b2b2b;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      z-index: 1000;
+      border-radius: 5px;
+      padding: 10px 0;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown-content a {
+      color: #e0e0e0;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #3d3d3d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #6d6d6d;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: 35px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    main p, main li {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .footer {
+      background-color: #2b2b2b;
+      color: #e0e0e0;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .footer p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .footer nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #dddddd;
+    }
+
+    .footer img {
+      vertical-align: middle;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer img:hover {
+      opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .header-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .header a {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: static;
+        display: none;
+        background-color: #2b2b2b;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 10px;
+      }
+
+      main {
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      main p, main li {
+        font-size: 16px;
+      }
+
+      .footer nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        </style>
+        </head>
+        <!-- Header Code DONT CHANGE OR TOUCH!!! -->
+    <body class="bg">
+    <div class="header">
+        <img src="Images/ScamAlertLogo.jpg" alt="ScamAlert Logo" />
+        <div class="header-right">
+        <a href="page1.html">Home</a>
+        <div class="dropdown">
+            <a href="#">Common Scams</a>
+            <div class="dropdown-content">
+            <a href="page2.html">Impersonation Scam</a>
+            <a href="page3.html">Investment Scam</a>
+            <a href="page4.html">E-Commerce Scams</a>
+            </div>
+        </div>
+        <a href="page5.html">How to Avoid</a>
+        <a href="page6.html">Form</a>
+        </div>
+    </div>
+        <div>
+        </div>
+<!-- Your Content Code parts -->
+   <main>
+        <h1><u>What Are E-Commerce Scams?</u></h1>
+        <p>
+            E-commerce scams involve fake online sellers or platforms that deceive people into paying for goods or services that are never delivered. 
+            These scams often appear on social media, fake websites, or online marketplaces with too-good-to-be-true prices or limited-time offers. 
+            Once payment is made, the scammer disappears or blocks further contact.
+        </p>
+        <img src="Images/FakeandrealProduct.jpg" width="600" class="center" alt="Fake product ad example"/>
+        <br>
+        <hr>
+        <br>
+        <h2><u>Common Tactics</u></h2>
+        <ul>
+            <li>Fake storefronts or social media ads offering heavily discounted products.</li>
+            <li>Sellers who insist on payment through non-traceable methods (e.g., PayNow to personal accounts, cryptocurrency, gift cards).</li>
+            <img src="Images/CommonTactics.jpg" width="500" class="center" alt="Scammer chat screenshot"/>
+            <li>Using fake reviews and images stolen from legitimate sources to appear trustworthy.</li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+
+        <h2><u>What to Do If You Fall Victim</u></h2>
+        <ul>
+            <li>Contact your bank immediately to report the transaction and attempt a reversal.</li>
+            <li>Report the scam to the platform (e.g., Facebook, Carousell) and block the scammer.</li>
+            <li>Preserve all transaction records, chat history, and screenshots, and file a police report as soon as possible.</li>
+        </ul>
+        <img src="Images/PoliceReport.jpg" width="600" class="center" alt="Preserve records"/>
+        <br>
+        <hr>
+        <br>
+    </main>
+
+        <!-- Footer Code. DONT CHANGE OR TOUCH!!! -->
+            <footer class="footer">
+        <p>Scam Alert</p>
+        <nav>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <span>Reach us:</span>
+        <a href="https://www.facebook.com/"><img src="Images/Facebook.png" width="23" height="23" alt="Facebook"/></a>
+        <a href="https://www.instagram.com/"><img src="Images/Instagram.png" width="23" height="23" alt="Instagram"/></a>
+        <a href="https://www.linkedin.com/home"><img src="Images/linkdn.png" width="23" height="23" alt="LinkedIn"/></a>
+        <a href="https://www.youtube.com/"><img src="Images/Youtube.png" width="32" height="23" alt="YouTube"/></a>
+        </nav>
+    </footer>
+    </body>
+</html>
